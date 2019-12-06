@@ -1,0 +1,188 @@
+/* ============== MAIN MENU  ============== */
+.header.mainBoardMenu {
+  background: #d2232a;
+  display: flex;
+  align-items: center;
+  /* height: 70px; */
+  box-shadow: 0 0px 5px 3px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+.mainBoardMenu .logo-typo {
+  font-size: 25px;
+  padding: 5px 0;
+  letter-spacing: -3.5px;
+  color: #fff;
+}
+.mainBoardMenu .menu li a {
+  color: #fff;
+}
+.body-blocks {
+  background: #eee;
+}
+/* ============== SIDE MENU  ============== */
+.sideMenu-toggle {
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #fff;
+}
+.sideMenu-toggle-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+  cursor: pointer;
+  max-height: 40px;
+}
+.sideMenu-toggle-btn:focus {
+  outline: none;
+}
+.sideMenu-toggle-btn:focus #sidebar-switch-svg {
+  fill: #bbb;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  max-width: 30px;
+  transition: 0.3s all ease-in-out;
+}
+#sidebar-switch-svg {
+  fill: #fff;
+  width: 30px;
+  transition: 0.3s all ease-in-out;
+}
+/* ----- Minified Left SideBar ----- */
+.side-menu .icon-text {
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 5px;
+  color: #2c3540;
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  background: #7f919d;
+  top: 50%;
+  left: 115%;
+  transform: translateY(-50%);
+  line-height: 40px;
+  opacity: 0;
+  transition: 0.2s opacity ease-in-out;
+  z-index: -1;
+}
+.side-menu-items .icon-text::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: -5px;
+  border-top: none;
+  border-right: none;
+  background: #7f919d;
+  z-index: -1;
+  transform: translateY(-50%) rotate(45deg);
+  top: 50%;
+}
+.side-menu-items:hover .icon-text {
+  opacity: 1;
+}
+/* -----  SideBar General style ----- */
+.side-menu {
+  background: #2c3540;
+  position: absolute;
+  z-index: 999;
+  width: 60px;
+  height: 100%;
+  transition: 0.2s all ease-in-out;
+}
+.side-menu .main-list {
+  background: #2c3540;
+}
+.side-menu-items {
+  width: 100%;
+  align-items: center;
+  padding: 15px 0;
+}
+.side-menu .main-list > li {
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+.side-menu .main-list > li:last-child {
+  border-bottom: none;
+}
+.main-menu-icon {
+  width: 30px;
+  margin: 0 auto;
+  /* padding: 5px; */
+  color: #7f919d;
+}
+.main-menu-icon svg {
+  fill: currentColor;
+}
+.main-menu-content {
+  padding: 0 10px;
+  color: #7f919d;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 20px;
+}
+.health-menu,
+.work-menu {
+  cursor: pointer;
+}
+.health-menu .side-menu-items::after,
+.work-menu .side-menu-items::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-right: 7px solid #eee;
+  right: 0;
+  top: 25px;
+}
+.sub-side-menu {
+  background: #c8c8c8;
+  transition: 0.1s all ease-in-out;
+  opacity: 0;
+  height: 0px;
+}
+.sub-side-menu.open {
+  opacity: 1;
+  transition: 0.2s all ease-in-out;
+  height: 100%;
+}
+.sub-side-menu li {
+  font-size: 14px;
+  padding-left: 20px;
+  border-bottom: 1px solid #232323;
+}
+.sub-side-menu li:last-child {
+  border-bottom: none;
+}
+.sub-side-menu li a {
+  padding: 10px 0;
+  align-items: center;
+}
+.sub-side-menu .main-menu-icon {
+  width: 20px;
+}
+.sub-side-menu .main-menu-content {
+  font-weight: normal;
+  font-size: 13px;
+}
+/* ----- side Menu hover Icons Color ----- */
+.side-menu-items:hover .main-menu-icon {
+  color: #eee;
+}
+.sub-side-menu li:hover .main-menu-icon {
+  color: #d2232a;
+}
+/* ----- side Menu hover Content Color ----- */
+.side-menu .side-menu-items:hover .main-menu-content {
+  color: #fff;
+}
+/* ----------------------------- */
+.main-blocks {
+  margin-left: 70px;
+  /* height: 100vh; */
+}
